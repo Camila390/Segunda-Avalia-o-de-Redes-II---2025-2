@@ -1,0 +1,29 @@
+version: '3.8'
+
+networks:
+  redes_test:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 12.93.0.0/24
+
+services:
+  servidor:
+    build: .
+    container_name: servidor_web
+    networks:
+      redes_test:
+        ipv4_address: 12.93.0.2
+    ports:
+      - "8080:80" 
+    command: python3 server_concorrente.py
+
+  cliente:
+    build: .
+    container_name: cliente_http
+    networks:
+      redes_test:
+        ipv4_address: 12.93.0.3
+    depends_on:
+      - servidor
+    command: tail -f /dev/null
