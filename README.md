@@ -9,7 +9,7 @@ Este projeto implementa e avalia o desempenho de um servidor web sequencial (sí
 
 ## 1. Links do Projeto
 
-- **Link do GitHub:** [ ]
+- **Link do GitHub:** [https://github.com/Camila390/Segunda-Avalia-o-de-Redes-II---2025-2]
 - **Link do Vídeo (YouTube):** [https://youtu.be/TXE8-8TR_0g]
 
 ---
